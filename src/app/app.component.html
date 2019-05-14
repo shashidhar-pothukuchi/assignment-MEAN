@@ -1,0 +1,27 @@
+<div class="container" style="margin-top:200px;margin-left:400px;">
+  <div class="form-inline active-cyan-4" >
+    <input (keyup.enter)="onenter()" class="form-control form-control-sm mr-3 w-75 dropdown" [(ngModel)]="inputLocation"
+    style="width:400px" type="text" placeholder="Search" aria-label="Search" list="search">
+    <datalist id="search">
+        <option *ngFor="let val of locArray" value={{val.location}}>
+  
+      </datalist>
+     <span (click)="onenter()" class="glyphicon glyphicon-search"></span>
+  </div>
+  </div>
+  <div class="container card-container">
+    <div class="row">
+        <div class="col-sm-2" *ngFor="let card of cardText">
+            <div class="card" >{{card}}</div>
+          </div>
+        <div class="col-sm-2" *ngIf="count>2">
+          <div class="dropdown">
+            <button class=" btn btn-primary card dropbtn" type="button">{{count-2}} more
+            </button>
+              <div class="dropdown-content">
+                <p *ngFor="let card of cardExtra">{{card}}</p>
+              </div>
+            </div>
+          </div>
+          </div>
+        </div>
