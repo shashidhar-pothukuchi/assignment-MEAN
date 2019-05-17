@@ -23,7 +23,7 @@ Follow the steps given-
 
 * Import the database by copying the values.json from db folder to MongoDB/bin and execute the following command in the same folder.
 
->mongoimport --db locationdb --collection values --file values.json --jsonArray
+>mongoimport --db locationdb --collection values --file values.json 
 
 * Then, start the mongodb server by using the command below -
 >mongob
